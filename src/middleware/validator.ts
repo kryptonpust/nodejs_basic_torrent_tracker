@@ -1,7 +1,7 @@
 import { TrackerRequest } from "../interfaces";
 
 export default (req: any, res: any, next: () => void) => {
-  console.log("Vlidator")
+  console.log("Validator")
   console.log(req.ip)
   const {
     info_hash,

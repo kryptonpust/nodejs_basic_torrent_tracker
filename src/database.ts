@@ -57,7 +57,7 @@ export default class DB {
           .run();
         this.localdb
           .prepare(
-            "INSERT INTO torrents(hash,name,size) VALUES ('6da27726d34ca6945f28b2c6e3aca18973fb1625','Test','1000')"
+            "INSERT INTO torrents(hash,name,size) VALUES ('788cadf362e61d201deacb6a9a51c3aea60631fa','Windows 10','5832765440')" //Demo torrent
           )
           .run();
       }
