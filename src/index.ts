@@ -8,14 +8,19 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT) : 8686;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running in PORT ${PORT}`);
 });
-const data = fs.readFileSync(__dirname + "/../store/demo.torrent");
-const dedata = bencode.decode(data);
 
-const peerlist: PeerListResponse[] = [
-  { peer_id: "abckd", ip: "192.168.10.103", port: 8989 },
-  { peer_id: "abckd", ip: "192.168.10.103", port: 8686 },
+app.get("/", (req, res) => {
+  //   console.log(req)
+    res.send(`Server running in PORT ${PORT}`);
+  });
+// const data = fs.readFileSync(__dirname + "/../store/demo.torrent");
+// const dedata = bencode.decode(data);
 
-];
+// const peerlist: PeerListResponse[] = [
+//   { peer_id: "abckd", ip: "192.168.10.103", port: 8989 },
+//   { peer_id: "abckd", ip: "192.168.10.103", port: 8686 },
+
+// ];
 
 // const result: Buffer[] = [];
 // for (let peer of peerlist) {
